@@ -208,9 +208,7 @@
         let stock = $('#stock_' + product_id).val();
         let qty = $('#qty_' + product_id).val();
 
-        console.log('stock-'+stock);
-        console.log('qty-'+qty);
-
+        
         if (!$.isNumeric(qty)) {
             toastr.error('Please enter valid Qty');
             return false;
