@@ -202,18 +202,21 @@
     });
 
     function addProduct(product_id) {
+        
         let product = $('#name_' + product_id).val();
         let price = $('#price_' + product_id).val();
         let stock = $('#stock_' + product_id).val();
         let qty = $('#qty_' + product_id).val();
 
+        console.log('stock-'+stock);
+        console.log('qty-'+qty);
 
         if (!$.isNumeric(qty)) {
             toastr.error('Please enter valid Qty');
             return false;
         }
 
-        if (qty > stock) {
+        if (parseFloat(qty) > parseFloat(stock)) {
             toastr.error('Stock not available');
             return false;
         }
@@ -250,8 +253,7 @@
     function itemSum() {
         $('#sum').addClass('d-none');
         $('.customer-details').addClass('d-none');
-        let rowCount = $('#items tr').length;
-
+        
         let sum = 0;
         $(".total").each(function () {
             sum += parseFloat($(this).val());
