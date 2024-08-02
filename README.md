@@ -13,7 +13,7 @@
 - Open the terminal and enter the cmd "php spark db:seed UserSeeder" to store user details into the table.
 - Open the terminal and enter the cmd "php spark db:seed ProductSeeder" to store product details into the table.
 
-# Teacher login details
+# User login details
 
 -email = admin@admin.com
 -password = 12345678
