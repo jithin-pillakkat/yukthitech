@@ -213,7 +213,7 @@
             return false;
         }
 
-        if ($.isNumeric(qty) > $.isNumeric(stock)) {
+        if (qty > stock) {
             toastr.error('Stock not available');
             return false;
         }
